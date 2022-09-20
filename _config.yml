@@ -1,9 +1,9 @@
 # Setup
 title:               From Ina
-tagline:             'My very first website : D'
-description:         'Hello, world! '
+tagline:             ''
+description:         'Hello, world! \n Welcome to my very first website : D'
 url:                 http://i7t5.github.io
-baseurl:             '/me'
+baseurl:             ''
 paginate:            5
 permalink:           pretty
 
