@@ -16,9 +16,9 @@
 title: From Ina
 email: inatang75@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Meet my very first website : D
-baseurl: /me/ # the subpath of your site, e.g. /blog
-url:  https://i7t5.github.io/me/ # the base hostname & protocol for your site, e.g. http://example.com
+  Welcome to my very first website : D
+baseurl: "" # the subpath of your site, e.g. /blog
+url:  https://i7t5.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:  I7T5
 
