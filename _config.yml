@@ -3,7 +3,7 @@ title:               From Ina
 tagline:             'My very first website : D'
 description:         'Hello, world! '
 url:                 http://i7t5.github.io
-baseurl:             '/me/'
+baseurl:             '/me'
 paginate:            5
 permalink:           pretty
 
