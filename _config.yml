@@ -1,33 +1,17 @@
 # Setup
 title:               From Ina
 tagline:             ''
-description:         'Hello, world! | Welcome to my very first website : D'
+description:         "Welcome to my very first website : D"
 url:                 http://i7t5.github.io
-baseurl:             ''
+#baseurl:             ''
 paginate:            5
 permalink:           pretty
 
-<<<<<<< HEAD
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: From Ina
-email: inatang75@outlook.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my very first website : D
-baseurl: "" # the subpath of your site, e.g. /blog
-url:  https://i7t5.github.io # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
-github_username:  I7T5
-=======
 # About/contact
 author:
   name:              Ina Tang
   url:               https://github.com/I7T5
   email:             inatang75@outlook.com
->>>>>>> 9096281bfda0c6cbef44855973db82a4ef56a454
 
 # Gems
 plugins:
