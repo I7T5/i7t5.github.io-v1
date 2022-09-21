@@ -2,8 +2,8 @@
 title:               From Ina
 tagline:             ''
 description:         "Welcome to my very first website : D"
-url:                 
-baseurl:             'http://i7t5.github.io/'
+url:                 http://i7t5.github.io
+baseurl:             ''
 paginate:            5
 permalink:           pretty
 
