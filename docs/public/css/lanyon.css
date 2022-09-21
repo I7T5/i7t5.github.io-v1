@@ -46,8 +46,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", Helvetica, Arial, sans-serif;
   color: #313131;
   letter-spacing: -.025rem;
 }
