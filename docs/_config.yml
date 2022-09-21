@@ -16,6 +16,7 @@ author:
 # Gems
 plugins:
   - jekyll-paginate
+  - jekyll-github-metadata
 
 # Custom vars
 version:             0.0.1
