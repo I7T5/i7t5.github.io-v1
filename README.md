@@ -1,3 +1,3 @@
-# Personal Website 
+# Personal Website
 
-Build with [Jekyll](http://jekyllrb.com/) [Lanyon](https://github.com/poole/lanyon). 
+Build with [Jekyll](http://jekyllrb.com/) and [Lanyon](https://github.com/poole/lanyon).
