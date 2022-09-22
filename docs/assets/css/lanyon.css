@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
  * Wrapper
  *
  * The wrapper is used to position site content when the sidebar is toggled. We
- * use an outter wrap to position the sidebar without interferring with the
+ * use an outer wrap to position the sidebar without interferring with the
  * regular page content.
  */
 
@@ -106,7 +106,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #505050;
 }
 .masthead-title a {
-  color: #505050;
+  background: -webkit-linear-gradient(left, #fb5151, #7126d9, #0d59f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .masthead-title small {
   font-size: 75%;
@@ -437,7 +439,51 @@ a.pagination-item:hover {
  * Themes
  *
  * Apply custom color schemes by adding the appropriate class to the `body`.
- * Based on colors from Base16: http://chriskempson.github.io/base16/#default.
+ */
+
+/* I7T5's RedNBlue
+ *
+ * Ina Tang's favorite colors blended.
+ */
+.theme-rednblue #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #fb5151;
+  /* background-image: linear-gradient(90deg, #fb5151, #7126d9, #0d59f2) */
+}
+
+/* Sidebar content */
+.theme-rednblue .sidebar {
+  font-family: "Helvetica Neue", sans-serif;
+  color: #808080;  /* text */
+  background-color: #fff;
+  box-shadow: 10px 0px 50px rgba(0, 0, 0, .1);
+}
+.theme-rednblue .sidebar a {
+  font-family: "Helvetica Neue", sans-serif;
+  background: -webkit-linear-gradient(left, #fb5151, #7126d9, #0d59f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sidebar nav */
+.theme-rednblue .sidebar-nav {
+  border-bottom: 1px solid #eee;
+}
+.theme-rednblue .sidebar-nav-item {
+  border-top: 1px solid #eee;
+}
+.theme-rednblue a.sidebar-nav-item:focus {
+  background-color: #eee;
+}
+
+.theme-rednblue .container a,
+.theme-rednblue .sidebar-toggle,
+.theme-rednblue .related-posts li a:hover {
+  color: #0d59f2;
+}
+
+
+/*
+ * The following is based on colors from Base16: http://chriskempson.github.io/base16/#default.
  */
 
 /* Red */
