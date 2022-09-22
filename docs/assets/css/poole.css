@@ -150,14 +150,14 @@ abbr[title] {
 /* Code */
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: "InputMono-Regular", 'Fira Code', Menlo, Monaco, monospace;
 }
 code {
-  padding: .25em .5em;
+  padding: .1em .3em;
   font-size: 85%;
   color: #bf616a;
   background-color: #f9f9f9;
-  border-radius: 3px;
+  border-radius: .4375rem; /* 7px */
 }
 pre {
   display: block;
@@ -171,6 +171,7 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f9f9f9;
+  border-radius: .875rem; /* 14px */
 }
 pre code {
   padding: 0;
@@ -190,7 +191,7 @@ pre code {
 
 /* Gist via GitHub Pages */
 .gist .gist-file {
-  font-family: Menlo, Monaco, "Courier New", monospace !important;
+  font-family: "InputMono-Regular", 'Fira Code', Menlo, Monaco, "Courier New", monospace !important;
 }
 .gist .markdown-body {
   padding: 15px;
@@ -276,6 +277,7 @@ tbody tr:nth-child(odd) th {
   padding: 1rem;
   color: #717171;
   background-color: #f9f9f9;
+  border-radius: .625rem; /* 10px */
 }
 
 
