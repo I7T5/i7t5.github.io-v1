@@ -186,6 +186,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: .5rem 1rem;
   border-top: 1px solid rgba(255,255,255,.1);
 }
+/*
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
@@ -193,6 +194,7 @@ a.sidebar-nav-item:focus {
   background-color: rgba(255,255,255,.1);
   border-color: transparent;
 }
+*/
 
 @media (min-width: 48em) {
   .sidebar-item {
@@ -220,10 +222,10 @@ a.sidebar-nav-item:focus {
   left: 1rem;
   display: flex;
   align-items: center;
-  padding: .25rem .75rem;
+  padding: .25rem .5rem;
   color: #505050;
   background-color: #fff;
-  border-radius: .25rem;
+  border-radius: .5rem;
   cursor: pointer;
 }
 
@@ -242,11 +244,13 @@ a.sidebar-nav-item:focus {
   background-color: #555;
 }
 
+/*
 .sidebar-toggle:active:before,
 #sidebar-checkbox:focus ~ .sidebar-toggle::before,
 #sidebar-checkbox:checked ~ .sidebar-toggle::before {
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M2.5 11.5A.5.5 0 013 11h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 7h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zm0-4A.5.5 0 013 3h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5z' clip-rule='evenodd'/%3E%3C/svg%3E") no-repeat;
 }
+*/
 
 @media (min-width: 30.1em) {
   .sidebar-toggle {
@@ -325,7 +329,7 @@ a.sidebar-nav-item:focus {
 /* Meta data line below post title */
 .post-date {
   display: block;
-  font-family: "Charis SIL", "Baskerville", Georgia, serif;
+  font-family: CharisSILW, Baskerville, Georgia, serif;
   margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
@@ -344,11 +348,16 @@ a.sidebar-nav-item:focus {
 .related-posts h3 {
   margin-top: 0;
 }
-.related-posts li small {
+.related-posts h3 a {
+  font-size: 87.5%;
+}
+.related-posts h3 small {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   font-size: 75%;
   color: #999;
 }
-.related-posts li a:hover {
+.related-posts h3 a:hover {
   color: #268bd2;
   text-decoration: none;
 }
@@ -445,40 +454,80 @@ a.pagination-item:hover {
  *
  * Ina Tang's favorite colors blended.
  */
+ 
+.theme-rednblue code,
+.theme-rednblue code { /* inline code */
+  color: hsl(265deg 70% 50%); /* purple */
+}
+
+.theme-rednblue figure { /* mainly for code block */
+  margin-inline-start: .5rem; /* left margin */
+  margin-inline-end: 2rem; /* right margin */
+}
+
+ /* Links */
+.theme-rednblue .container a,
+.theme-rednblue .sidebar-toggle {
+  color: hsl(220deg 90% 50%);  /* blue */
+}
+.theme-rednblue .container a:visited {
+  color: hsl(220deg 90% 35%);
+}
+.theme-rednblue .related-posts a:focus, .theme-rednblue .related-posts li a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.theme-rednblue .sidebar-toggle:hover {
+  background-color: #eee;
+}
+.theme-rednblue .sidebar-toggle:active,
+.theme-rednblue #sidebar-checkbox:focus ~ .sidebar-toggle,
 .theme-rednblue #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #fb5151;
+  background-color: #eee;
   /* background-image: linear-gradient(90deg, #fb5151, #7126d9, #0d59f2) */
 }
 
 /* Sidebar content */
 .theme-rednblue .sidebar {
-  font-family: "Helvetica Neue", sans-serif;
   color: #808080;  /* text */
   background-color: #fff;
-  box-shadow: 10px 0px 50px rgba(0, 0, 0, .1);
+  box-shadow: 10px 0px 50px rgba(0,0,0,.1);
 }
 .theme-rednblue .sidebar a {
-  font-family: "Helvetica Neue", sans-serif;
-  background: -webkit-linear-gradient(left, #fb5151, #7126d9, #0d59f2);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #0d59f2;
+  /* conflicts with active/hover/focus styles
+  background-image: -webkit-linear-gradient(left, #fb5151, #7126d9, #0d59f2);  * red, purple, blue *
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  */
+}
+.theme-rednblue .sidebar-item {
+  /* border-bottom: 1px dashed #eee; */
 }
 
 /* Sidebar nav */
 .theme-rednblue .sidebar-nav {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px dashed #eee;
+  /* box-shadow: 0 0 15px rgba(0,0,0,.075); */
 }
-.theme-rednblue .sidebar-nav-item {
-  border-top: 1px solid #eee;
+.theme-rednblue a.sidebar-nav-item {
+  border-top:1px dashed #eee;
 }
-.theme-rednblue a.sidebar-nav-item:focus {
-  background-color: #eee;
+.theme-rednblue span.sidebar-nav-item {
+  /* Currently v.X.X.X */
+  border-top:1px dashed #eee;
+  border-bottom:1px dashed #eee;
 }
 
-.theme-rednblue .container a,
-.theme-rednblue .sidebar-toggle,
-.theme-rednblue .related-posts li a:hover {
-  color: #0d59f2;
+.theme-rednblue .sidebar-nav-item.active {
+  font-family: "HelveticaNeue Bold", "Helvetica Neue Bold", "Helvetica Bold", Arial, sans-serif;
+  font-weight: 600;
+}
+.theme-rednblue a.sidebar-nav-item:hover, .theme-rednblue a.sidebar-nav-item:focus {
+  box-shadow: 0 0 10px rgba(0,0,0,.065);
+  /* text and bgcolor conflicts with webkit thingys */
 }
 
 

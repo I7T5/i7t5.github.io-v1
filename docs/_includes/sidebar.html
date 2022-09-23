@@ -25,12 +25,19 @@
       {% endif %}
     {% endfor %}
 
-    <a class="sidebar-nav-item" href="{{ site.github.repository_url }}/archive/v{{ site.version }}.zip">Download</a>
-    <a class="sidebar-nav-item" href="{{ site.github.repository_url }}">GitHub Project</a>
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
   </nav>
 
   <div class="sidebar-item">
+    <p style="margin-bottom:0;">
+      <a href="{{ site.github.repository_url }}">
+        <img
+         src="{{ '/assets/images/icon-github.svg' | absolute_url }}"
+         alt="GitHub Icon"
+         width="32" height="32"
+         style="display:inline-block;margin-bottom:.5rem;opacity:0.5;" />
+      </a>
+    </p>
     <p>
       &copy; {{ site.time | date: '%Y' }} Yina Tang<br> All rights reserved.
     </p>
