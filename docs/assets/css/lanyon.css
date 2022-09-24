@@ -455,14 +455,13 @@ a.pagination-item:hover {
  * Ina Tang's favorite colors blended.
  */
  
-.theme-rednblue code,
 .theme-rednblue code { /* inline code */
   color: hsl(265deg 70% 50%); /* purple */
 }
 
-.theme-rednblue figure { /* mainly for code block */
-  margin-inline-start: .5rem; /* left margin */
-  margin-inline-end: 2rem; /* right margin */
+.theme-rednblue figure.highlight { /* mainly for code block */
+  margin-inline-start: 1rem; /* left margin */
+  margin-inline-end: 1rem; /* right margin */
 }
 
  /* Links */
