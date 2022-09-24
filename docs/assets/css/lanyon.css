@@ -41,8 +41,9 @@ body {
 }
 
 html {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Philosopher, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
+  color: #808080;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -352,8 +353,8 @@ a.sidebar-nav-item:focus {
   font-size: 87.5%;
 }
 .related-posts h3 small {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: "Charis SIL", Baskerville, Georgia, serif;
+  font-weight: 400;
   font-size: 75%;
   color: #999;
 }
@@ -455,6 +456,27 @@ a.pagination-item:hover {
  * Ina Tang's favorite colors blended.
  */
  
+ /* Fonts */
+.theme-rednblue h1, h2, h3, h4, h5, h6 {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.theme-rednblue .post-date {
+  display: block;
+  font-family: "Charis SIL", Baskerville, Georgia, serif;
+}
+
+.theme-rednblue .related-posts h3 small {
+  font-family: "Charis SIL", Baskerville, Georgia, serif;
+  font-weight: 400;
+}
+
+.theme-rednblue .pagination {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
 .theme-rednblue code { /* inline code */
   color: hsl(265deg 70% 50%); /* purple */
 }
