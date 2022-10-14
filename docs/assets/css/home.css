@@ -28,6 +28,10 @@
   100%{background-position:0% 50%}
 }
 
+.animated-rnb-gradient body {
+  background: transparent;
+}
+
 .animated-rnb-gradient .navbar {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
   --bs-navbar-color: rgba(255, 255, 255, .5);
@@ -54,6 +58,7 @@
     color: hsl(220deg 90% 40%); 
 }
 @media (prefers-color-scheme: dark) {
+
   .animated-rnb-gradient .navbar-collapse {
     background-color: #272727;
   }
@@ -79,7 +84,7 @@
 }
 @media (max-width: 576px) {
   .typing-container {
-      padding: 0 2rem; 
+    padding: 0 2rem; 
   }
 }
 .typed-text {
