@@ -4,7 +4,7 @@ tagline:             ''
 description:         "Welcome to my very first website : D"
 url:                 https://i7t5.github.io
 baseurl:             ''
-paginate:            5
+# paginate:            5
 permalink:           pretty
 
 # About/contact
@@ -12,6 +12,10 @@ author:
   name:              Ina Tang
   url:               https://github.com/I7T5
   email:             inatang75@outlook.com
+
+# Includes
+include:
+ - _pages
 
 # Gems
 plugins:

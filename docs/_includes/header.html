@@ -1,0 +1,34 @@
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{{ '/' | absolute_url }}">IT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>
+          </li>
+
+          {% comment %}
+            The code below dynamically generates a sidebar nav of pages with
+            `layout: page` in the front-matter. See Github poole/lanyon readme for usage.
+          {% endcomment %}
+
+          {% assign pages_list = site.pages | sort:"url" %}
+          {% for node in pages_list %}
+            {% if node.title != null %}
+              {% if node.layout == "page" %}
+                <li class="nav-item">
+                  <a class="nav-link{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+                </li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

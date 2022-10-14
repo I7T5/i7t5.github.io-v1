@@ -1,21 +1,21 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | absolute_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<body class="animated-rnb-gradient d-flex flex-column h-100">
+  
+  {% include header.html %}
 
-    <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+  <main class="flex-shrink-0">
+    <div class="container typing-container">
+      <span class="typed-text">
+        <span class="typing-cursor"></span>
+      </span>
+    </div>
+  </main>
 
-    {{ post.excerpt }}
-    <p>......</p>
-  </div>
-  {% endfor %}
-</div>
+  <script src="{{ site.baseurl }}/assets/js/bootstrap.bundle.min.js"></script>
+  <script src='{{ site.baseurl }}/assets/js/script.js'></script>
+</body>
+
