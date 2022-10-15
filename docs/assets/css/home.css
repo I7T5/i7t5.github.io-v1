@@ -81,6 +81,8 @@
 .typing-container {
   display: flex;
   place-content: top left;
+  margin-top: 2rem; 
+  margin-bottom: 2rem; 
 }
 @media (max-width: 576px) {
   .typing-container {
@@ -107,9 +109,14 @@
   display: inline-block;
   width: 2.5rem;
   height: 4.5rem;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: #0001;
   margin-left: 4px;
   animation: blink .6s linear infinite alternate;
+}
+@media (prefers-color-scheme: dark) {
+  .typing-cursor {
+    background-color: #fff2;
+  }
 }
 .typing-cursor.typing {
   animation: none;
