@@ -16,8 +16,14 @@
 // })(document);
 
 
+function initFontFamily(headerFont, bodyFont) {
+  document.body.style.fontFamily = bodyFont;
+  document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(h => h.style.fontFamily = headerFont);
+  // document.getElementsByClassName('masthead-title')[0].style.fontFamily = bodyFont;
+}
+
 // Thanks @ths for correcting my function at https://stackoverflow.com/a/74041481/19374566
-function changeFontStyle() {
+function changeFontFamily() {
   var fontSelector = document.getElementById("font-select");
   if (fontSelector.value === "") return; // Choose fonts...
   const fontsJSON = JSON.parse(fontSelector.value);
@@ -87,12 +93,10 @@ function typeWriter() {
 document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize fonts
-  document.body.style.fontFamily = "Karla";
-  document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(h => h.style.fontFamily = "Nunito");
-  // document.getElementsByClassName('masthead-title')[0].style.fontFamily = "Karla";
+  initFontFamily("Nunito", "Karla"); 
 
   // Font Select
-  if (document.getElementById("font-select")) document.getElementById("font-select").addEventListener('change', changeFontStyle);
+  if (document.getElementById("font-select")) document.getElementById("font-select").addEventListener('change', changeFontFamily);
 
   // Typing Effect
   if (document.querySelector(".typed-text")) typeWriter();

@@ -1,9 +1,18 @@
 <header>
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="{{ '/' | absolute_url }}">IT</a>
+      <a class="navbar-brand" href="{{ '/' | absolute_url }}">
+        <!-- {% if page.title == "Home" %}
+          IT
+        {% else %}
+          {{ page.title }}
+        {% endif %} -->
+        IT
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon">
+          <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5 11a1 1 0 1 0 0 2zm14 2a1 1 0 1 0 0-2zM5 6a1 1 0 0 0 0 2zm14 2a1 1 0 1 0 0-2zM5 16a1 1 0 1 0 0 2zm14 2a1 1 0 1 0 0-2zM5 13h14v-2H5zm0-5h14V6H5zm0 10h14v-2H5z" fill="currentColor"/></svg>
+        </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav mx-auto">

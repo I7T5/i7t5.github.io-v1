@@ -1,10 +1,11 @@
 # Setup
 title:               Ina Tang
+short_title:         IT
 tagline:             ''
 description:         "Welcome to my very first website : D"
 url:                 https://i7t5.github.io
 baseurl:             ''
-# paginate:            5
+# paginate:          5
 permalink:           pretty
 
 # About/contact
@@ -12,6 +13,17 @@ author:
   name:              Ina Tang
   url:               https://github.com/I7T5
   email:             inatang75@outlook.com
+
+
+# Custom vars
+collections:
+  posts:
+    output:          true
+    permalink:       /blog/:categories/:year/:month/:day/:title/
+
+excerpt_separator:   <!--more-->
+version:             0.1.0
+
 
 # Includes
 include:
@@ -22,6 +34,5 @@ plugins:
   - jekyll-paginate
   - jekyll-github-metadata
 
-# Custom vars
-version:             0.1.0
+# Misc
 google_analytics_id: #UA-XXXX-Y
