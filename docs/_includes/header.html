@@ -40,7 +40,7 @@
 
           <li class="nav-item">
 
-            <div class="btn-group font-radios">
+            <div class="btn-group font-radios nav-link">
               <button class="btn nav-link" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                 <svg viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v18m0-18h4.14c1.75 0 2.625 0 3.194.51a2 2 0 0 1 .156.156c.51.57.51 1.444.51 3.194V7m-8-4H7.86c-1.75 0-2.625 0-3.194.51-.055.05-.107.101-.156.156C4 4.236 4 5.11 4 6.86V7m8 14H8m4 0h4" stroke="currentColor" stroke-width="2.75" stroke-linecap="round"/></svg>
               </button>
@@ -48,33 +48,36 @@
                 <li class="dropdown-item-text">
                   <div>Choose fonts: </div>
 
-                  <div>
-                    <input name="font-radios" id="system-font-radio" type="radio" value='{"headerFont":"system","bodyFont":"system"}'>
-                    <label for="system-font-radio">System</label>
-                  <div>
-                    <input name="font-radios" id="serif-system-font-radio" type="radio" value='{"headerFont":"ui-serif","bodyFont":"system-ui"}'>
-                    <label for="serif-system-font-radio">System Serif & Sans</label>
-                  </div>
-                  <div>
-                    <input name="font-radios" id="lato-karla-font-radio" type="radio" value='{"headerFont":"Lato","bodyFont":"Karla"}'>
-                    <label for="lato-karla-font-radio">Lato & Karla</label>
-                  </div>
-                  <div>
-                    <input name="font-radios" id="lora-lato-font-radio" type="radio" value='{"headerFont":"Lora","bodyFont":"Lato"}'>
-                    <label for="lora-lato-font-radio">Lora & Lato</label>
-                  </div>
-                  <div>
-                    <input name="font-radios" id="nunito-karla-font-radio" type="radio" value='{"headerFont":"Nunito","bodyFont":"Karla"}' checked>
-                    <label for="nunito-karla-font-radio">Nunito & Karla</label>
-                  </div>
-                  <div>
-                    <input name="font-radios" id="philosopher-muli-font-radio" type="radio" value='{"headerFont":"Philosopher","bodyFont":"Mulish"}'>
-                    <label for="philosopher-muli-font-radio">Philosopher & Muli</label>
-                  </div>
-                  <div>
-                    <input name="font-radios" id="asl-ptserif-font-radio" type="radio" value='{"headerFont":"Averia Serif Libre","bodyFont":"PT Serif"}'>
-                    <label for="ask-ptserif-font-radio">Averia Serif Libre & PT Serif</label>
-                  </div>
+                  <ul>
+                    <li>
+                      <input name="font-radios" id="system-font-radio" type="radio" value='{"headerFont":"system","bodyFont":"system"}'>
+                      <label for="system-font-radio">System</label>
+                    </li>
+                    <li>
+                      <input name="font-radios" id="serif-system-font-radio" type="radio" value='{"headerFont":"ui-serif","bodyFont":"system-ui"}'>
+                      <label for="serif-system-font-radio">System Serif & Sans</label>
+                    </li>
+                    <li>
+                      <input name="font-radios" id="lato-karla-font-radio" type="radio" value='{"headerFont":"Lato","bodyFont":"Karla"}'>
+                      <label for="lato-karla-font-radio">Lato & Karla</label>
+                    </li>
+                    <li>
+                      <input name="font-radios" id="lora-lato-font-radio" type="radio" value='{"headerFont":"Lora","bodyFont":"Lato"}'>
+                      <label for="lora-lato-font-radio">Lora & Lato</label>
+                    </li>
+                    <li>
+                      <input name="font-radios" id="nunito-karla-font-radio" type="radio" value='{"headerFont":"Nunito","bodyFont":"Karla"}' checked>
+                      <label for="nunito-karla-font-radio">Nunito & Karla</label>
+                    </li>
+                    <li>
+                      <input name="font-radios" id="philosopher-muli-font-radio" type="radio" value='{"headerFont":"Philosopher","bodyFont":"Mulish"}'>
+                      <label for="philosopher-muli-font-radio">Philosopher & Muli</label>
+                    </li>
+                    <li>
+                      <input name="font-radios" id="asl-ptserif-font-radio" type="radio" value='{"headerFont":"Averia Serif Libre","bodyFont":"PT Serif"}'>
+                      <label for="ask-ptserif-font-radio">Averia Serif Libre & PT Serif</label>
+                    </li>
+                  </ul>
 
                 </li>
               </ul>

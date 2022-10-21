@@ -8,9 +8,8 @@
  *    \/____/\/__/\/_/\/_/\/_/`/___/> \/___/  \/_/\/_/
  *                               /\___/
  *                               \/__/
+ * Based on lanyon by @mdo (MIT License)(https://github.com/poole/lanyon)
  *
- * Designed, built, and released under MIT license by @mdo. Learn more at
- * https://github.com/poole/lanyon.
  */
 
 
@@ -63,7 +62,7 @@
   --bs-link-visited-color-dark: #0487d7;
   --bs-code-color-dark: #aaa;
   --bs-code-inline-bg-dark: #363636; 
-  --bs-code-block-bg-dark: #2a2d35; 
+  --bs-code-block-bg-dark: #303030; 
 }
 
 
@@ -128,12 +127,12 @@ header + main {
 code { /* inline */
   padding: .1em .3em;
   font-size: 85%;
-  color: var(--bs-code-color); 
   background-color: var(--bs-code-inline-bg);
   border-radius: .425rem; /* 7px */
 }
 code, pre {
   font-family: var(--bs-font-monospace);
+  color: var(--bs-code-color); 
 }
 pre {
   border-radius: 0.875rem;
@@ -231,7 +230,6 @@ tbody tr:nth-child(odd) th {
 .navbar-collapse {
   border-radius: .75rem;
   background-color: var(--bs-body-bg);
-  /* box-shadow: 0 0 3.125rem rgba(0,0,0,.1); */
   padding-left: .5rem;
 }
 @media (min-width: 992px) {
@@ -296,14 +294,21 @@ tbody tr:nth-child(odd) th {
   height: .9rem; 
   width: .9rem; 
 } */
+.font-radios.nav-link.btn-group {
+  padding-top: .375rem;
+  padding-bottom: .375rem;
+  height: 2.5rem; 
+}
 .font-radios .nav-link.btn, 
 .font-radios.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
-  padding: .375rem .75rem; 
+  padding: 0 .25rem; 
+  height: 1.5rem; 
+  border-width: 0;
   border-radius: .375rem; 
 }
 .font-radios .btn.show {
   border-color: transparent; 
-  background-color: var(--bs-code-block-bg);
+  background-color: transparent;
 }
 .font-radios svg {
   color: inherit; 
@@ -314,9 +319,9 @@ tbody tr:nth-child(odd) th {
   color: var(--bs-body-color); 
   background-color: var(--bs-code-block-bg);
   border-width: 0;
-  -webkit-transition: visibility .2s ease-in-out;
+  /* -webkit-transition: visibility .2s ease-in-out;
   -moz-transition: visibility .2s ease-in-out;
-  transition: visibility .2s ease-in-out;
+  transition: visibility .2s ease-in-out; */
   box-shadow: 0 0 1rem #0002;
   display: none; 
 }
@@ -325,8 +330,13 @@ tbody tr:nth-child(odd) th {
 }
 .font-radios .dropdown-item-text {
   color: var(--bs-body-color); 
+  font-weight: normal;
   width: 100%;
   white-space: nowrap;
+}
+.font-radios .dropdown-menu ul {
+  padding-left: 0;
+  list-style: none;
 }
 .font-radios input[type=radio], 
 .font-radios label {
@@ -342,14 +352,26 @@ input[type=radio] {
   border: .1rem solid var(--bs-border-color);
   transition: 0.2s all linear;
   margin-right: .25rem;
-  position: relative;
-  top: .075rem;
+  /* position: relative;
+  top: .07rem; */
 }
 input[type=radio]:checked {
   border: .2rem solid var(--bs-red);
 }
-.font-radios label:hover {
+.font-radios label:hover, 
+.font-radios label:focus {
   color: var(--bs-link-color); 
+}
+
+@media (max-width: 992px) {
+  .font-radios .nav-link.btn, 
+  .font-radios.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    padding: 0 0; 
+    border-radius: .375rem; 
+  }
+  .font-radios .dropdown-menu {
+    width: 100%; 
+  }
 }
 
 
@@ -359,26 +381,31 @@ input[type=radio]:checked {
  */
 
 footer.footer {
-  color: var(--bs-code-color); 
+  --bs-footer-color: #808080;
+  --bs-footer-color-dark: #666; 
+  --bs-footer-social-media-color: #ccc; 
+  --bs-footer-social-media-color-dark: var(--bs-footer-color-dark); 
+
+  color: var(--bs-footer-color); 
   background-color: var(--bs-code-block-bg);
 }
 
 .social-media a {
-  color: #ccc;
+  color: var(--bs-footer-social-media-color);
   display: inline-block;
 }
 .social-media a:hover,
 .social-media a:focus {
-  color: #808080;
+  color: var(--bs-link-color); 
 }
 
 #acknowledgements,
 #acknowledgements:visited {
-  color: #ccc;
+  color: var(--bs-footer-social-media-color);
 }
 #acknowledgements:hover,
 #acknowledgements:focus {
-  color: #808080;
+  color: var(--bs-footer-color);
 }
 
 
@@ -616,23 +643,21 @@ a.pagination-item:hover {
 
   /* Footer */
   footer.footer {
-    color: #666; 
-    background-color: #202020;
+    --bs-footer-color: var(--bs-footer-color-dark);
+    --bs-footer-social-media-color: var(--bs-footer-social-media-color-dark); 
+
+    background-color: var(--bs-code-block-bg);
   }
   
-  .social-media a {
-    color: #666;
-  }
   .social-media a:hover,
   .social-media a:focus {
-    color: #00a0ff;
+    color: var(--bs-link-color);
   }
   
   #acknowledgements {
     color: #555;
   }
   #acknowledgements:hover {
-    color: #666;
     text-decoration: none;
   }
   
