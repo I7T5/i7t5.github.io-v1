@@ -1,14 +1,12 @@
 // Sidebar slide
 // (function(document) {
-//   var toggle = document.querySelector('.sidebar-toggle');
-//   var sidebar = document.querySelector('#sidebar');
-//   var checkbox = document.querySelector('#sidebar-checkbox');
+//   var toggle = document.querySelector('#font-select-toggle');
+//   var checkbox = document.querySelector('#font-select-checkbox');
 
 //   document.addEventListener('click', function(e) {
 //     var target = e.target;
 
 //     if(!checkbox.checked ||
-//        sidebar.contains(target) ||
 //        (target === checkbox || target === toggle)) return;
 
 //     checkbox.checked = false;
@@ -19,18 +17,25 @@
 function initFontFamily(headerFont, bodyFont) {
   document.body.style.fontFamily = bodyFont;
   document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(h => h.style.fontFamily = headerFont);
-  // document.getElementsByClassName('masthead-title')[0].style.fontFamily = bodyFont;
 }
 
+
 // Thanks @ths for correcting my function at https://stackoverflow.com/a/74041481/19374566
-function changeFontFamily() {
-  var fontSelector = document.getElementById("font-select");
-  if (fontSelector.value === "") return; // Choose fonts...
-  const fontsJSON = JSON.parse(fontSelector.value);
-  // From least to most specific
-  document.body.style.fontFamily = fontsJSON.bodyFont;
-  document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(h => h.style.fontFamily = fontsJSON.headerFont);
-  // document.getElementsByClassName('masthead-title')[0].style.fontFamily = fontsJSON.bodyFont;
+function enableChangeFont() {
+  var fontRadios = document.getElementsByName('font-radios');
+
+  fontRadios.forEach(fontRadio => fontRadio.addEventListener('change', function changeFont() {
+    const fontsJSON = JSON.parse(fontRadio.value);
+    if (fontsJSON.bodyFont === "system") {
+      document.body.style.fontFamily = null;
+      document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(h => h.style.fontFamily = null);
+    }
+    else {
+      // From least to most specific
+      document.body.style.fontFamily = fontsJSON.bodyFont;
+      document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(h => h.style.fontFamily = fontsJSON.headerFont);
+    }
+  })); 
 }
 
 // Typewriting Effect at Homepage
@@ -95,8 +100,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize fonts
   initFontFamily("Nunito", "Karla"); 
 
-  // Font Select
-  if (document.getElementById("font-select")) document.getElementById("font-select").addEventListener('change', changeFontFamily);
+  // Font Radios
+  if (document.getElementsByName("font-radios")) enableChangeFont();
 
   // Typing Effect
   if (document.querySelector(".typed-text")) typeWriter();

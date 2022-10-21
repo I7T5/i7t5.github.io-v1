@@ -45,6 +45,7 @@
 }
 
 
+
 /*
  * Sidebar
  *
@@ -126,6 +127,33 @@ span.sidebar-nav-item {
   border-top:1px dashed #eee;
 }
 
+label[for=font-select] {
+  font-family: Philosopher;
+  font-weight: bold;
+}
+#font-select {
+  font-family: system-ui, -apple-system, Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: .75rem;
+  color: inherit;
+  text-overflow: ellipsis;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3CclipPath%20id%3D%22a%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22b%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20transform%3D%22rotate(90%2012%2012)%22%2F%3E%3C%2FclipPath%3E%3Cg%20clip-path%3D%22url(%23a)%22%3E%3Cg%20clip-path%3D%22url(%23b)%22%3E%3Cpath%20d%3D%22M17%208.875l-2.208-2.152c-1.319-1.287-1.978-1.93-2.792-1.93s-1.473.643-2.792%201.93L7%208.875m10%206.25l-2.208%202.152c-1.319%201.287-1.978%201.93-2.792%201.93s-1.473-.643-2.792-1.93L7%2015.125%22%20stroke%3D%22%230d59f2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+    /* url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2211%22%20fill%3D%22%23ffff0%22%2F%3E%0A%3C%2Fsvg%3E") */ /* background circle */;
+  background-size: 10%;
+  background-position: 98% 50%;
+  background-repeat: no-repeat;
+  background-color: #f0f0f0;
+  width: 8.5rem; /* make it inline with label */
+  padding: .125rem 1.25rem .125rem .5rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f0f0f0;
+  border-radius: 1rem;
+  margin: 0;
+}
+
 
 @media (min-width: 48em) {
   .sidebar-item {
@@ -136,6 +164,7 @@ span.sidebar-nav-item {
     padding-right: 1.5rem;
   }
 }
+
 
 
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
@@ -233,4 +262,47 @@ span.sidebar-nav-item {
   -webkit-transform: translateX(14rem);
       -ms-transform: translateX(14rem);
           transform: translateX(14rem);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  
+  /* Masthead */
+  .masthead {
+    border-bottom: 1px solid var(--bs-border-color-dark);
+  }
+  .masthead-title a {
+    color: #fb5151;
+  }
+
+  /* Sidebar */
+  .sidebar a, .sidebar a:visited {
+    color: var(--bs-link-color-dark); /* lightest blue */
+  }
+  .sidebar-nav {
+    border-bottom: 1px dashed #555;
+  }
+  a.sidebar-nav-item, 
+  span.sidebar-nav-item {
+    border-top: 1px dashed #555;
+  }
+
+  #font-select {
+    background-image:
+    url("data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3CclipPath%20id%3D%22a%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22b%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20transform%3D%22rotate(90%2012%2012)%22%2F%3E%3C%2FclipPath%3E%3Cg%20clip-path%3D%22url(%23a)%22%3E%3Cg%20clip-path%3D%22url(%23b)%22%3E%3Cpath%20d%3D%22M17%208.875l-2.208-2.152c-1.319-1.287-1.978-1.93-2.792-1.93s-1.473.643-2.792%201.93L7%208.875m10%206.25l-2.208%202.152c-1.319%201.287-1.978%201.93-2.792%201.93s-1.473-.643-2.792-1.93L7%2015.125%22%20stroke%3D%22%2300a0ff%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    background-color: #383838;
+    border-color: #383838;
+  }
+
+  .sidebar-toggle::before {
+    background: url("data:image/svg+xml,%3Csvg%20viewBox%3D%270%200%2016%2016%27%20fill%3D%27%23aaa%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20fill-rule%3D%27evenodd%27%20d%3D%27M2.5%2011.5A.5.5%200%20013%2011h10a.5.5%200%20010%201H3a.5.5%200%2001-.5-.5zm0-4A.5.5%200%20013%207h10a.5.5%200%20010%201H3a.5.5%200%2001-.5-.5zm0-4A.5.5%200%20013%203h10a.5.5%200%20010%201H3a.5.5%200%2001-.5-.5z%27%20clip-rule%3D%27evenodd%27%2F%3E%3C%2Fsvg%3E") no-repeat;
+  }
+  .sidebar-toggle:hover,
+  .sidebar-toggle:active,
+  #sidebar-checkbox:focus ~ .sidebar-toggle,
+  #sidebar-checkbox:checked ~ .sidebar-toggle {
+    background-color: #383838;
+  }
+
 }
