@@ -1,14 +1,36 @@
 /*
- *  ___
- * /\_ \
- * \//\ \      __      ___   __  __    ___     ___
- *   \ \ \   /'__`\  /' _ `\/\ \/\ \  / __`\ /' _ `\
- *    \_\ \_/\ \_\.\_/\ \/\ \ \ \_\ \/\ \_\ \/\ \/\ \
- *    /\____\ \__/.\_\ \_\ \_\/`____ \ \____/\ \_\ \_\
- *    \/____/\/__/\/_/\/_/\/_/`/___/> \/___/  \/_/\/_/
- *                               /\___/
- *                               \/__/
- * Based on lanyon by @mdo (MIT License)(https://github.com/poole/lanyon)
+
+      ,a8a,                           
+     ,8" "8,                          
+     d8   8b                          
+     88   88                          
+     88   88                          
+     Y8   8P  ,ggg,,ggg,     ,gggg,gg 
+     `8, ,8' ,8" "8P" "8,   dP"  "Y8I 
+8888  "8,8"  I8   8I   8I  i8'    ,8I 
+`8b,  ,d8b, ,dP   8I   Yb,,d8,   ,d8b,
+  "Y88P" "Y88P'   8I   `Y8P"Y8888P"`Y8
+
+ascii-art (option nvscript) from https://ascii-generator.site/ by @hermanTenuki on Github
+
+Also good: 
+ - big
+ - broadway
+ - carligraphy
+ - cards
+ - danc4
+ - dancingfont
+ - dotmatrix
+ - larry3d
+ - pawp
+ - script
+ - standard
+ - stforek
+ - subzero
+
+
+ * Produced by @I7T5
+ * Heavily based on lanyon(https://github.com/poole/lanyon) by @mdo (MIT License)
  *
  */
 
@@ -62,7 +84,7 @@
   --bs-link-visited-color-dark: #0487d7;
   --bs-code-color-dark: #aaa;
   --bs-code-inline-bg-dark: #363636; 
-  --bs-code-block-bg-dark: #303030; 
+  --bs-code-block-bg-dark: #202020; 
 }
 
 
@@ -77,12 +99,6 @@ html,
 body {
   overflow-x: hidden;
 }
-
-/* Fav Bright Colors
- * Red    | #fb5151 | rgb(251 81 81)  | hsl(360deg 96% 65%),
- * Purple | #7126d9 | rgb(113 38 217) | hsl(265deg 70% 50%),
- * Blue   | #0d59f2 | rgb(13 89 242)  | hsl(220deg 90% 50%),
- */
 
 html {
   font-family: system-ui, Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
