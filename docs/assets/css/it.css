@@ -448,7 +448,8 @@ footer.footer {
   display: inline-block;
 }
 .social-media a:hover,
-.social-media a:focus {
+.social-media a:focus, 
+.social-media a:visited {
   color: var(--bs-link-color); 
 }
 .social-media svg {
