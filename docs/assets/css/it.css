@@ -1,22 +1,21 @@
 /*
-
-      ,a8a,                           
-     ,8" "8,                          
-     d8   8b                          
-     88   88                          
-     88   88                          
-     Y8   8P  ,ggg,,ggg,     ,gggg,gg 
-     `8, ,8' ,8" "8P" "8,   dP"  "Y8I 
-8888  "8,8"  I8   8I   8I  i8'    ,8I 
-`8b,  ,d8b, ,dP   8I   Yb,,d8,   ,d8b,
-  "Y88P" "Y88P'   8I   `Y8P"Y8888P"`Y8
+      ,a8a,                              d8'          
+     ,8" "8,                            d8'           
+     d8   8b                           ""             
+     88   88                                          
+     88   88                                          
+     Y8   8P  ,ggg,,ggg,     ,gggg,gg          ,g,    
+     `8, ,8' ,8" "8P" "8,   dP"  "Y8I         ,8'8,   
+8888  "8,8"  I8   8I   8I  i8'    ,8I        ,8'  Yb  
+`8b,  ,d8b, ,dP   8I   Yb,,d8,   ,d8b,      ,8'_   8) 
+  "Y88P" "Y88P'   8I   `Y8P"Y8888P"`Y8      P' "YY8P8P
 
 ascii-art (option nvscript) from https://ascii-generator.site/ by @hermanTenuki on Github
 
 Also good: 
  - big
  - broadway
- - carligraphy
+ - caligraphy
  - cards
  - danc4
  - dancingfont
@@ -26,7 +25,7 @@ Also good:
  - script
  - standard
  - stforek
- - subzero
+ - sub-zero
 
 
  * Produced by @I7T5
@@ -84,7 +83,7 @@ Also good:
   --bs-link-visited-color-dark: #0487d7;
   --bs-code-color-dark: #aaa;
   --bs-code-inline-bg-dark: #363636; 
-  --bs-code-block-bg-dark: #202020; 
+  --bs-code-block-bg-dark: #2e2e2e; 
 }
 
 
@@ -173,6 +172,26 @@ td, th {
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
+}
+
+
+/* Forms */
+.form-control {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg); 
+  border-color: var(--bs-border-color); 
+}
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg); 
+}
+.btn {
+  --bs-btn-color: var(--bs-body-color);
+  --bs-btn-hover-bg: var(--bs-code-inline-bg); 
+}
+.btn:hover {
+  color: var(--bs-btn-color); 
+  background-color: var(--bs-btn-hover-bg); 
 }
 
 
@@ -406,6 +425,24 @@ footer.footer {
   background-color: var(--bs-code-block-bg);
 }
 
+.branding {
+  font-size: .9rem; 
+}
+.branding a {
+  color: inherit; 
+}
+.branding a:hover, 
+.branding a:focus {
+  color: #ffe01b; 
+  text-decoration: none; 
+}
+.branding svg {
+  height: .9rem; 
+  width: auto; 
+  margin-bottom: .25rem; 
+}
+
+
 .social-media a {
   color: var(--bs-footer-social-media-color);
   display: inline-block;
@@ -413,6 +450,10 @@ footer.footer {
 .social-media a:hover,
 .social-media a:focus {
   color: var(--bs-link-color); 
+}
+.social-media svg {
+  width: 1.2rem; 
+  height: 1.2rem; 
 }
 
 #acknowledgements,
