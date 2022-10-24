@@ -341,6 +341,9 @@ tbody tr:nth-child(odd) th {
   border-width: 0;
   border-radius: .375rem; 
 }
+.font-radios .nav-link.btn:hover {
+  background-color: transparent;
+}
 .font-radios .btn.show {
   border-color: transparent; 
   background-color: transparent;
