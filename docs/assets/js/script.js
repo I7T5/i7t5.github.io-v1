@@ -22,6 +22,8 @@ function initFontFamily(headerFont, bodyFont) {
 
 // Thanks @ths for correcting my function at https://stackoverflow.com/a/74041481/19374566
 function enableChangeFont() {
+  if (!document.getElementsByName('font-radios')) return; 
+
   var fontRadios = document.getElementsByName('font-radios');
 
   fontRadios.forEach(fontRadio => fontRadio.addEventListener('change', function changeFont() {
@@ -38,10 +40,13 @@ function enableChangeFont() {
   })); 
 }
 
+
 // Typewriting Effect at Homepage
 // Based on https://codepen.io/Coding_Journey/pen/BEMgbX
 
 function typeWriter() {
+
+  if (!document.querySelector(".typed-text")) return; 
 
   const typedTextSpan = document.querySelector(".typed-text");
   const cursorSpan = document.querySelector(".typing-cursor");
@@ -95,15 +100,36 @@ function typeWriter() {
 }
 
 
+function selectLink() {
+  if (!document.getElementById("post-share")) return; 
+  var sharePost = document.getElementById("post-share"); 
+  sharePost.addEventListener('click', function() {
+    var postLink = document.getElementById("post-link"); 
+    postLink.classList.toggle("d-none");
+    document.getElementById("post-link-label").classList.toggle("d-none");
+    document.getElementById("post-license").classList.toggle("d-none");
+    postLink.focus(); 
+    postLink.select(); 
+  });
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize fonts
   initFontFamily("Nunito", "Karla"); 
 
-  // Font Radios
-  if (document.getElementsByName("font-radios")) enableChangeFont();
+  // Font radios
+  enableChangeFont();
 
-  // Typing Effect
-  if (document.querySelector(".typed-text")) typeWriter();
+  // Enable Bootstrap popovers
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]'); 
+  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)); 
+
+  // Typing effect
+  typeWriter();
+
+  // Share post
+  selectLink(); 
 });
-

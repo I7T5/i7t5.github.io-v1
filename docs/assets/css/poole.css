@@ -60,7 +60,7 @@ html {
 
 body {
   color: #515151;
-  background-color: #fff;
+  /* background-color: #fff; */
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -152,13 +152,13 @@ code,
 pre {
   font-family: "InputMono-Regular", 'Fira Code', Menlo, Monaco, monospace;
 }
-code {
+/* code {
   padding: .1em .3em;
   font-size: 85%;
   color: #bf616a;
   background-color: #f9f9f9;
-  border-radius: .4375rem; /* 7px */
-}
+  border-radius: .4375rem;
+} */
 pre {
   display: block;
   margin-top: 0;
@@ -212,21 +212,7 @@ pre code {
 }
 
 /* Quotes */
-blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
-  color: #7a7a7a;
-  border-left: .25rem solid #e5e5e5;
-}
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-@media (min-width: 30em) {
-  blockquote {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
-  }
-}
+
 
 img {
   display: block;

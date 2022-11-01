@@ -11,19 +11,8 @@ permalink:           pretty
 # About/contact
 author:
   name:              Ina Tang
-  url:               https://github.com/I7T5
   email:             inatang75@outlook.com
-
-
-# Custom vars
-collections:
-  posts:
-    output:          true
-    permalink:       /blog/:categories/:year/:month/:day/:title/
-
-excerpt_separator:   <!--more-->
-version:             0.1.0
-
+  github:            https://github.com/I7T5
 
 # Includes
 include:
@@ -33,6 +22,31 @@ include:
 plugins:
   - jekyll-paginate
   - jekyll-github-metadata
+  - jekyll-toc
+
+# Customs
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Ina Tang"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      toc: true
+
+collections:
+  posts:
+    output:          true
+    permalink:       /blog/:categories/:year/:month/:day/:title/
+
+excerpt_separator:   <!--more-->
+since:               2022.9.20
+
 
 # Misc
 google_analytics_id: #UA-XXXX-Y

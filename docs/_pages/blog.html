@@ -16,7 +16,8 @@ permalink: /blog/
     <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
 
     {{ post.excerpt }}
-    <p>......</p>
+    
+    <a href="{{ post.url | absolute_url }}">read more</a>
   </div>
   {% endfor %}
 </div>

@@ -2,11 +2,51 @@
 layout: default
 ---
 
-<div class="post">
+<a class="back" href="{{ site.baseurl }}/blog/">
+  <svg class="inline" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><clipPath id="a"><path d="M0 0h24v24H0z"/></clipPath><clipPath id="b"><path d="M0 0h24v24H0z" transform="rotate(-90 12 12)"/></clipPath><g clip-path="url(#a)"><g clip-path="url(#b)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"><path d="M15 4L9.828 9.172c-1.333 1.333-2 2-2 2.828s.667 1.495 2 2.828L15 20"/><path d="M15 4L9.828 9.172c-1.333 1.333-2 2-2 2.828s.667 1.495 2 2.828L15 20"/></g></g></svg>
+  <span>Back</span>
+</a>
+<article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date: "%a %B %e, %Y" }}</span>
-  {{ content }}
-</div>
+
+  {{ content | toc }}
+
+  <div class="post-footer mt-5">
+    <div class="post-tags mt-4">
+      <a title="Tags">
+        <svg class="icon inline" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_361_25245)"><path d="M18.201 15.556l-2.645 2.645c-.686.687-1.132 1.13-1.503 1.412-.348.266-.51.295-.618.295-.108 0-.27-.03-.618-.295-.371-.283-.817-.725-1.503-1.412L5.962 12.85c-.645-.645-.755-.78-.813-.923-.059-.144-.075-.317-.066-1.23L5.11 8.08c.01-.953.019-1.568.084-2.021.06-.425.154-.56.23-.635.075-.075.209-.168.634-.23.453-.064 1.068-.073 2.021-.083l2.618-.027c.912-.01 1.085.007 1.229.066.143.058.278.168.923.813l5.352 5.352c.687.686 1.13 1.132 1.412 1.503.266.348.295.51.295.618 0 .108-.03.27-.295.618-.283.371-.725.817-1.412 1.503z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9.65 8.237A1 1 0 1 1 8.238 9.65 1 1 0 0 1 9.65 8.237z" fill="currentColor"/></g><defs><clipPath id="clip0_361_25245"><path fill="currentColor" d="M0 0H24V24H0z"/></clipPath></defs></svg>
+      </a>
+      {% if page.tags.size >= 1 %}
+        {% for tag in page.tags %}
+          <a class="tag" href="" >{{ tag }}</a>
+        {% endfor %}
+      {% else %}
+        <span>none</span>
+      {% endif %}
+    </div>
+
+    <div class="post-actions row mt-2">
+      <div class="col-auto list-unstyled justify-content-start pe-0">
+        <button class="a btn align-items-center" id="post-share" title="Share" type="button">
+          <svg class="icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.736 6v3.385C4.246 9.385 5.018 17 5.018 17s2.316-4.23 7.718-4.23v3.384L20 11.077 12.736 6z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="col-auto px-0 ms-1">
+        <div class="row">
+          <input class="d-none col-4 form-control form-control-xs" type="text" id="post-link" value="{{ site.url }}{{ page.url }}" aria-label="readonly input example" readonly>
+          <label id="post-link-label" for="post-link" class="d-none col-auto"><kbd>Cmd/Ctrl</kbd> + <kbd>C</kbd></label>
+        </div>
+        <div class="row">
+          <span class="d-none text-muted" id="post-license">Content of this site is licensed under the <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 license</a> unless otherwise noted</span>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</article>
 
 {% if site.related_posts.size >= 1 %}
 <div class="related">
