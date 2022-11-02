@@ -1,0 +1,123 @@
+/*
+   Animated Gradient Background
+   From https://www.gradient-animator.com
+*/
+
+.animated-rnb-gradient {
+  color: #fffd; 
+  background: linear-gradient(270deg, #ff0000, #6b00ff, #001cff);
+  background-size: 600% 600%;
+
+  -webkit-animation: rnb-gradient-animation 20s ease infinite;
+  -moz-animation: rnb-gradient-animation 20s ease infinite;
+  animation: rnb-gradient-animation 20s ease infinite;
+}
+@-webkit-keyframes rnb-gradient-animation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes rnb-gradient-animation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes rnb-gradient-animation {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.animated-rnb-gradient body {
+  background: transparent;
+}
+
+.animated-rnb-gradient .navbar {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  --bs-navbar-color: rgba(255, 255, 255, .5);
+  --bs-navbar-hover-color: rgba(255, 255, 255, .8);
+  --bs-navbar-active-color: rgba(255, 255, 255, .8);
+  --bs-navbar-toggler-icon-bg: /* hamburger #ffffff80 */ url('data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%2011a1%201%200%201%200%200%202zm14%202a1%201%200%201%200%200-2zM5%206a1%201%200%200%200%200%202zm14%202a1%201%200%201%200%200-2zM5%2016a1%201%200%201%200%200%202zm14%202a1%201%200%201%200%200-2zM5%2013h14v-2H5zm0-5h14V6H5zm0%2010h14v-2H5z%22%20fill%3D%22%23ffffff80%22%2F%3E%3C%2Fsvg%3E');
+  background-color: transparent;
+  box-shadow: none;
+}
+.animated-rnb-gradient .navbar-collapse {
+  background-color: #fff;
+}
+.animated-rnb-gradient a.navbar-brand, 
+.animated-rnb-gradient a.navbar-brand:visited, 
+.animated-rnb-gradient a.nav-link, 
+.animated-rnb-gradient a.nav-link:visited {
+  color: #0d59f2; 
+  text-decoration: none;
+}
+.animated-rnb-gradient a.navbar-brand:hover,
+.animated-rnb-gradient a.navbar-brand:focus, 
+.animated-rnb-gradient a.nav-link:hover, 
+.animated-rnb-gradient a.nav-link:focus {
+    color: hsl(220deg 90% 40%); 
+}
+@media (prefers-color-scheme: dark) {
+
+  .animated-rnb-gradient .navbar-collapse {
+    background-color: #272727;
+  }
+  .animated-rnb-gradient a.navbar-brand, 
+  .animated-rnb-gradient a.navbar-brand:visited, 
+  .animated-rnb-gradient a.nav-link, 
+  .animated-rnb-gradient a.nav-link:visited {
+    color: #00a0ff; 
+  }
+  .animated-rnb-gradient a.navbar-brand:hover,
+  .animated-rnb-gradient a.navbar-brand:focus, 
+  .animated-rnb-gradient a.nav-link:hover, 
+  .animated-rnb-gradient a.nav-link:focus {
+    color: #00a0ff; 
+}
+}
+
+
+/* Typing Effect on Homepage */
+.typing-container {
+  display: flex;
+  place-content: top left;
+  margin-top: 2rem; 
+  margin-bottom: 2rem; 
+}
+@media (max-width: 576px) {
+  .typing-container {
+    padding: 0 2rem; 
+  }
+}
+.typed-text {
+  font-family: "Input Mono", Menlo, monospace; 
+  font-size: 4rem;
+  font-weight: bold;
+  display: inline-block;
+}
+.animated-rnb-gradient .typed-text {
+  color: rgba(255, 255, 255, .75);
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  40% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;}
+}
+.typing-cursor {
+  display: inline-block;
+  width: 2.5rem;
+  height: 4.5rem;
+  background-color: #0001;
+  margin-left: 4px;
+  animation: blink .6s linear infinite alternate;
+}
+@media (prefers-color-scheme: dark) {
+  .typing-cursor {
+    background-color: #fff2;
+  }
+}
+.typing-cursor.typing {
+  animation: none;
+}

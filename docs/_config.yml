@@ -1,0 +1,52 @@
+# Setup
+title:               Ina Tang
+short_title:         IT
+tagline:             ''
+description:         "Welcome to my very first website : D"
+url:                 https://i7t5.github.io
+baseurl:             ''
+# paginate:          5
+permalink:           pretty
+
+# About/contact
+author:
+  name:              Ina Tang
+  email:             inatang75@outlook.com
+  github:            https://github.com/I7T5
+
+# Includes
+include:
+ - _pages
+
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-github-metadata
+  - jekyll-toc
+
+# Customs
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Ina Tang"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      toc: true
+
+collections:
+  posts:
+    output:          true
+    permalink:       /blog/:categories/:year/:month/:day/:title/
+
+excerpt_separator:   <!--more-->
+since:               2022.9.20
+
+
+# Misc
+google_analytics_id: #UA-XXXX-Y
