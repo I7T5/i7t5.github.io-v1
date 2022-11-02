@@ -2,3 +2,5 @@ _site
 .sass-cache
 .jekyll-metadata
 docs/assets/unimportants
+.DS_Store
+docs/.DS_Store
