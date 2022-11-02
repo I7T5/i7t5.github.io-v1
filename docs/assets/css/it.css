@@ -133,6 +133,12 @@ header + main {
   outline: #0d59f260 solid 1px; /* mainly for #font-select */
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+  border-radius: 0;
+}
 /* Image Float Effect */
 .float {
   display: flex; 
@@ -145,6 +151,9 @@ header + main {
 }
 
 iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -210,6 +219,11 @@ kbd {
 }
 
 /* Tables */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
 table {
   margin-bottom: 1rem;
   width: 100%;
@@ -778,6 +792,16 @@ footer.footer {
 
   color: var(--bs-footer-color); 
   background-color: var(--bs-code-block-bg);
+}
+footer .row {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+@media (max-width: 575.98px) {
+  footer .row {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .branding a {
