@@ -804,19 +804,26 @@ footer .row {
   }
 }
 
-.branding a {
+.mce_inline_error, 
+#mce-error-response {
+  color: var(--bs-red); 
+}
+#mce-success-response {
+  color: limegreen; 
+}
+.branding {
   color: inherit; 
+  font-weight: bold;
 }
-.branding a:hover, 
-.branding a:focus {
+.branding:hover, 
+.branding:focus {
   color: #ffe01b; 
-  text-decoration: none; 
 }
-.branding svg {
+/* .branding svg {
   height: .9rem; 
   width: auto; 
   margin-bottom: .25rem; 
-}
+} */
 
 
 .contact a, 
