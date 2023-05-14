@@ -777,6 +777,20 @@ a.pagination-item:hover {
   }
 }
 
+.icon-mask {
+  width: 5rem; 
+  height: 5rem; 
+  padding: 0; 
+  -webkit-mask-image: url("/assets/img/icon-mask-template.svg"); 
+  mask-image: url("/assets/img/icon-mask-template.svg"); 
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.icon-mask > img {
+  width: 5rem; 
+  height: 5rem; 
+}
+
 
 
 /*
